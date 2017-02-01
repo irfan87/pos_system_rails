@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Sign Up</h1>
+			<%= form_for @user do |f| %>
+				<div class="col-md-10">
+					<%= f.label :username %>
+					<%= f.text_field :username %>
+				</div>
+				<div class="col-md-10">
+					<%= f.label :password %>
+					<%= f.password_field :password %>
+				</div>
+				<div class="col-md-10">
+					<%= f.label :password_confirmation %>
+					<%= f.password_field :password_confirmation %>
+				</div>
+				<div class="col-md-10">
+					<%= f.label :phone_number %>
+					<%= f.phone_field :phone_number %>
+				</div>
+				<div class="col-md-10">
+					<%= f.label :hp_number %>
+					<%= f.phone_field :hp_number %>
+				</div>
+				<div class="col-md-10">
+					<%= f.label :shop_address %>
+					<%= f.text_area :shop_address %>
+				</div>
+				<div class="col-md-10">
+					<%= f.submit %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
