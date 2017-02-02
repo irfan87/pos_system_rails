@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
+
+  def authorize
+  	redirect_to login_path notice: 'Username and password is required to access this site'
+  end
 end
