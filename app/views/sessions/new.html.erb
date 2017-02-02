@@ -1,21 +1,23 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<h1>Log In</h1>
-			<%= form_tag sessions_path do %>
-				<div class="col-md-10">
-					<%= label_tag :username %>
-					<%= text_field_tag :username %>
-				</div>
-				<div class="col-md-10">
-					<%= label_tag :password %>
-					<%= password_field_tag :password %>
-				</div>
-				<div class="col-md-10">
-					<%= submit_tag "Log In" %>
-					<%= link_to 'Sign up', signup_path %> as a member
-				</div>
-			<% end %>
+		<div class="col"></div>
+		<div class="col-md-10">
+			<div class="col-md-10">
+				<%= form_tag sessions_path, role: "form" do %>
+					<div class="form-group">
+						<%= label_tag :username %>
+						<%= text_field_tag :username, params[:username], class: "form-control" %>
+					</div>
+					<div class="form-group">
+						<%= label_tag :password %>
+						<%= password_field_tag :password, params[:pasword], class: "form-control" %>
+					</div>
+					<div class="form-group">
+						<%= submit_tag "Log in!", class: "btn btn-primary btn-lg btn-submit" %>
+					</div>
+				<% end %>
+			</div>
 		</div>
 	</div>
+	<div class="col"></div>
 </div>
