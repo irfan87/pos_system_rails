@@ -1,16 +1,14 @@
 <div class="container">
-	<div class="row">
-		<div class="col"></div>
-		<div class="col-md-10">
-			<div class="col-md-10">
+	<div class="rows" style="margin: 2em; padding: 1em; width: auto;">
+		<div class="col">
+			<div class="panel-body col-6 offset-3">
+				<h2>Log In</h2>
 				<%= form_tag sessions_path, role: "form" do %>
 					<div class="form-group">
-						<%= label_tag :username %>
-						<%= text_field_tag :username, params[:username], class: "form-control" %>
+						<%= text_field_tag :username, params[:username], class: "form-control", autofocus: true, placeholder: "Username" %>
 					</div>
 					<div class="form-group">
-						<%= label_tag :password %>
-						<%= password_field_tag :password, params[:pasword], class: "form-control" %>
+						<%= password_field_tag :password, params[:pasword], class: "form-control", placeholder: "Password" %>
 					</div>
 					<div class="form-group">
 						<%= submit_tag "Log in!", class: "btn btn-primary btn-lg btn-submit" %>
@@ -19,5 +17,4 @@
 			</div>
 		</div>
 	</div>
-	<div class="col"></div>
 </div>

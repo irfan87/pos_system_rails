@@ -8,12 +8,17 @@
 			</ul>
 			<ul class="nav navbar-nav">
 			<% if current_user.present? %>
+				<li class="nav-item">
+					<%= link_to 'Profile', "#", class: "nav-link" %>
+				</li>
+				<li class="nav-item">
+					<%= link_to 'Message', "#", class: "nav-link" %>
+				</li>
 				<li class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
 						Hi, <%= current_user.username %>!
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<%= link_to 'Contact Us', contact_us_path, class: "dropdown-item" %>
 						<%= link_to 'Log Out', logout_path, class: "dropdown-item glyphicon-signout" %>
 					</div>
 				</li>
