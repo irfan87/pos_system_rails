@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>config.ru - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="./README_md.html">README</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="./app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="./app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="./app/assets/javascripts/sessions_coffee.html">sessions.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/users_coffee.html">users.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/welcome_pages_coffee.html">welcome_pages.coffee</a>
+  
+    <li><a href="./app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/my_layout_css_scss.html">my_layout.css.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/sessions_scss.html">sessions.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/users_scss.html">users.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/welcome_pages_scss.html">welcome_pages.scss</a>
+  
+    <li><a href="./config_ru.html">config.ru</a>
+  
+    <li><a href="./log/development_log.html">development.log</a>
+  
+    <li><a href="./public/404_html.html">404.html</a>
+  
+    <li><a href="./public/422_html.html">422.html</a>
+  
+    <li><a href="./public/500_html.html">500.html</a>
+  
+    <li><a href="./public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="./public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="./public/assets/application-20a1ca73c50951242dd334cfef0abf145614732f08ef09eb9647398cb79ee736_css.html">application-20a1ca73c50951242dd334cfef0abf145614732f08ef09eb9647398cb79ee736.css</a>
+  
+    <li><a href="./public/assets/application-3ed80f4b532b0d96005fa242d5231327b35c0db3fc85d665c7dfbe847cefb379_css.html">application-3ed80f4b532b0d96005fa242d5231327b35c0db3fc85d665c7dfbe847cefb379.css</a>
+  
+    <li><a href="./public/assets/application-7e24ed28c3a46e10a8b8312f68bcff25740508171bbddbcf7ac39ec628df7f8b_js.html">application-7e24ed28c3a46e10a8b8312f68bcff25740508171bbddbcf7ac39ec628df7f8b.js</a>
+  
+    <li><a href="./public/assets/application-81752845adaa408c45cba728729496590f759337719a91bfdcb9e4e7f39c3eec_css.html">application-81752845adaa408c45cba728729496590f759337719a91bfdcb9e4e7f39c3eec.css</a>
+  
+    <li><a href="./public/assets/application-8e23cb6ef86884d554b6e8f5990fef89200ecd15f1cc59d280a3f293d8eb3faf_js.html">application-8e23cb6ef86884d554b6e8f5990fef89200ecd15f1cc59d280a3f293d8eb3faf.js</a>
+  
+    <li><a href="./public/assets/application-a993a1ccaf2c97f35fdb21a13d6c31c65e705a10cea71a9bffe4f9720ed50118_js.html">application-a993a1ccaf2c97f35fdb21a13d6c31c65e705a10cea71a9bffe4f9720ed50118.js</a>
+  
+    <li><a href="./public/assets/application-fb0fd193d10bfa574fbf09cd792e37627ca2178333576594cbed1f54907e5819_css.html">application-fb0fd193d10bfa574fbf09cd792e37627ca2178333576594cbed1f54907e5819.css</a>
+  
+    <li><a href="./public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="./public/robots_txt.html">robots</a>
+  
+    <li><a href="./tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="./tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page config.ru">
+
+<p># This file is used by Rack-based servers to start the application.</p>
+
+<p>require_relative &#39;config/environment&#39;</p>
+
+<p>run Rails.application</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
