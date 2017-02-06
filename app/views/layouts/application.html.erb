@@ -11,10 +11,14 @@
   <body>
 		<div class="container" id="main">
       <%= render "partials/headers" %>
-      <%= render "partials/alert" %>
 		</div>
-    <div class="row">
+    <div class="container">
+      <div class="row">
+        <%= render "partials/alert" %>
+      </div>
+      <div class="row">
       <%= yield %>
+    </div>
     </div>
   </body>
 </html>

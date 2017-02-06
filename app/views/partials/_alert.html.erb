@@ -1,7 +1,11 @@
-<div class="container-fluid" id="alert_div">
-	<% flash.each do |name, msg| %>
-    <strong>
-      <%= content_tag :div, msg, class: "alert-#{name} col-md-5 offset-4 text-alert" %>
-    </strong>
-  <% end %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<% flash.each do |name, msg| %>
+		    <strong>
+		      <%= content_tag :div, msg, class: "alert alert-#{name} col-md-6 col-md-offset-3 text-alert", role: "alert" %>
+		    </strong>
+		  <% end %>
+		</div>
+	</div>
 </div>
