@@ -9,20 +9,12 @@
   </head>
 
   <body>
-  	<%= render "partials/headers" %>
-		<div class="container">
-      <div class="row">
-        <div class="col-11">
-          <div class="text-center">
-            <% flash.each do |name, msg| %>
-              <strong>
-                <%= content_tag :div, msg, class: "alert-#{name} col-md-5 offset-4 text-alert" %>
-              </strong>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    	<%= yield %>
+		<div class="container" id="main">
+      <%= render "partials/headers" %>
+      <%= render "partials/alert" %>
 		</div>
+    <div class="row">
+      <%= yield %>
+    </div>
   </body>
 </html>

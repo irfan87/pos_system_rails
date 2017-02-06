@@ -1,16 +1,2 @@
-@import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-@import "my_layout";
-
-#container {
-	width: auto;
-	margin: 0 auto;
-	padding: 20px;
-}
-
-.carousel-item > img {
-	width: 300em;
-	height: 25em;
-	align: center;
-}
+@import 'bootstrap';
+@import 'bootstrap-theme';

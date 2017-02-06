@@ -49,14 +49,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# bootstrap 4 gem
-gem 'bootstrap', '~> 4.0.0.alpha6'
-
-# gem tether for bootstrap 4
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.3.3'
-end
-
 # font-awesome
 gem "font-awesome-rails"
 gem "font-awesome-sass"
