@@ -14,8 +14,10 @@
 						<%= password_field_tag :password, params[:pasword], class: "form-control", placeholder: "Password" %>
 					</div>
 					<div class="form-group">
-						<%= submit_tag "Log in!", class: "btn btn-primary btn-lg btn-submit" do %>
-						<% end %>
+						<%= submit_tag "Log in!", class: "btn btn-primary btn-lg btn-submit" %>
+					</div>
+					<div class="form-group">
+						Or <%= link_to "Register", signup_path %> if you are not a member
 					</div>
 					<% end %>
 				</div>
