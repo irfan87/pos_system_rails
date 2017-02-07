@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
 
   	if @user.save
-  		redirect_to root_path, flash.now[:success] = 'Thanks for register with us'
+  		redirect_to root_path
+      flash.now[:success] = 'Thanks for register with us'
   	else
   		render :new
   	end
