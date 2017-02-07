@@ -7,6 +7,16 @@
 				</div>
 				<div class="panel-body">
 					<%= form_for @user, role: "form" do |f| %>
+						<% if @user.errors.any? %>
+							<div class="error_message">
+								<h2>Ops!</h2>
+								<ul>
+									<% @user.errors.full_messages.each do |msg| %>
+										<li><%= msg %></li>
+									<% end %>
+								</ul>
+							</div>
+						<% end %>
 						<div class="form-group">
 							<%= f.label :username %>
 							<%= f.text_field :username, class: "form-control" %>

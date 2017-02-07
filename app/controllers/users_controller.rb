@@ -10,8 +10,11 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
   		redirect_to root_path
       flash.now[:success] = 'Thanks for register with us'
-  	else
+  	elsif user_params.nil?
+      flash.now[:danger] = "Error!"
   		render :new
+    else
+      render :new
   	end
   end
 
