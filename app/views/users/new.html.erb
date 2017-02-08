@@ -22,24 +22,16 @@
 							<%= f.text_field :username, class: "form-control" %>
 						</div>
 						<div class="form-group">
+							<%= f.label :email_address %>
+							<%= f.email_field :email_address, class: "form-control" %>
+						</div>
+						<div class="form-group">
 							<%= f.label :password %>
 							<%= f.password_field :password, class: "form-control" %>
 						</div>
 						<div class="form-group">
 							<%= f.label :password_confirmation %>
 							<%= f.password_field :password_confirmation, class: "form-control" %>
-						</div>
-						<div class="form-group">
-							<%= f.label :phone_number %>
-							<%= f.phone_field :phone_number, class: "form-control" %>
-						</div>
-						<div class="form-group">
-							<%= f.label :hp_number %>
-							<%= f.phone_field :hp_number, class: "form-control" %>
-						</div>
-						<div class="form-group">
-							<%= f.label :shop_address %>
-							<%= f.text_area :shop_address, class: "form-control", cols: "20", rows: "5" %>
 						</div>
 						<div class="form-group">
 							<%= f.submit class: "btn btn-primary" %>
