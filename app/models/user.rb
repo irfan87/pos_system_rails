@@ -13,4 +13,6 @@ class User < ApplicationRecord
 	validates_length_of :password, minimum: 3
 
 	validates_uniqueness_of :username
+
+	has_many :shops
 end

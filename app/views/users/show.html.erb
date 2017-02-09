@@ -1,0 +1,54 @@
+<div class="container">
+	<div class="col-md-12">
+		<div class="col-md-10 col-xs-offset-1">
+			<div class="panel">
+				<div class="panel-body">
+					<h1>User Profile</h1>
+					<div class="page-header">
+						<h3>General Information</h3>
+					</div>
+					<p>
+						<strong>Username: </strong> <%= @user.username %>
+					</p>
+					<p>
+						<strong>Email (current): </strong> <%= @user.email_address %>
+					</p>
+					<div>
+						<%= link_to 'Edit Profile', edit_user_path(@user), class: "btn btn-info" %>
+					</div>
+					<div class="page-header">
+						<h3>Detail Information</h3>
+					</div>
+					<div>
+						<% @user.shops.each do |shop| %>
+						<p>
+							<strong>Shop Name</strong>:
+							<%= shop.shop_name %>
+						</p>
+						<p>
+							<strong>Registration Number: </strong>
+							<%= shop.registration_number %>
+						</p>
+						<p>
+							<strong>Shop Phone Number(Primary):</strong>
+							<%= shop.shop_phone_number_1 %>
+						</p>
+						<p>
+							<strong>Shop Phone Number(Secondary):</strong>
+							<%= shop.shop_phone_number_2 %>
+						</p>
+						<p>
+							<strong>Shop Address:</strong>
+							<%= shop.shop_address %>
+						</p>
+						<div>
+							<%= link_to 'Edit Shop Profile', edit_user_shop_path(shop), class: "btn btn-info" %>
+						</div>
+						<% end %>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
