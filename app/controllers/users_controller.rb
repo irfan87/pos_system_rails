@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   	if @user.save
       session[:user_id] = @user.id
-  		redirect_to root_path
+  		redirect_to user_path(session[:user_id])
       flash.now[:success] = 'Thanks for register with us'
   	elsif user_params.nil?
       flash.now[:danger] = "Error!"

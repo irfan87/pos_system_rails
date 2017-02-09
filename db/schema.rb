@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208084505) do
+ActiveRecord::Schema.define(version: 20170209075748) do
+
+  create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "shop_name"
+    t.string   "registration_number"
+    t.string   "shop_phone_number_1"
+    t.string   "shop_phone_number_2"
+    t.text     "shop_address",        limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["user_id"], name: "index_shops_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "username"
@@ -20,4 +32,5 @@ ActiveRecord::Schema.define(version: 20170208084505) do
     t.string   "email_address"
   end
 
+  add_foreign_key "shops", "users"
 end

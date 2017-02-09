@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
-  resources :users
+  resources :users do
+ 		resources :shops
+  end
+
   resources :sessions
 
   get 'signup', to: 'users#new', as: 'signup'
