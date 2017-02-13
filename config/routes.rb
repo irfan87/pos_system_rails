@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :users do
- 		resources :shops
+ 		resources :shops, except: :index
   end
 
   resources :sessions

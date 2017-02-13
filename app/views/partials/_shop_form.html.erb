@@ -1,0 +1,25 @@
+<%= form_for [@user, @shop] do |f| %>
+<div class="form-group">
+	<%= f.label :shop_name, 'Shop Name' %>
+	<%= f.text_field :shop_name, class: "form-control", placeholder: 'Shop ABC', autofocus: true %>
+</div>
+<div class="form-group">
+	<%= f.label :registration_number, 'Shop Registration Number' %>
+	<%= f.text_field :registration_number, class: "form-control", placeholder: 'Ex: 012345678-V' %>
+</div>
+<div class="form-group">
+	<%= f.label :shop_phone_number_1, 'Phone Number (Primary)' %>
+	<%= f.text_field :shop_phone_number_1, class: "form-control", placeholder: 'Ex: 012345678' %>
+</div>
+<div class="form-group">
+	<%= f.label :shop_phone_number_2, 'Phone Number (Secondary)' %>
+	<%= f.text_field :shop_phone_number_2, class: "form-control", placeholder: 'Ex: 012345678' %>
+</div>
+<div class="form-group">
+	<%= f.label :shop_address, 'Shop Address' %>
+	<%= f.text_area :shop_address, class: "form-control", cols: 4, rows: 5, placeholder: 'Shop Address' %>
+</div>
+<div class="form-group">
+	<%= f.submit class: "btn btn-primary btn-lg pull-right" %>
+</div>
+<% end %>

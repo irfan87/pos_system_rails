@@ -17,10 +17,10 @@
 						<%= link_to 'Edit Profile', edit_user_path(@user), class: "btn btn-info" %>
 					</div>
 					<div class="page-header">
-						<h3>Detail Information</h3>
+						<h3>Detail Information (<%= @user.shops.count%> Shops)</h3>
 					</div>
-					<div>
-						<% @user.shops.each do |shop| %>
+					<div class="panel-body">
+					<% @user.shops.all.each do |shop| %>
 						<p>
 							<strong>Shop Name</strong>:
 							<%= shop.shop_name %>
@@ -42,11 +42,12 @@
 							<%= shop.shop_address %>
 						</p>
 						<div>
-							<%= link_to 'Edit Shop Profile', edit_user_shop_path(shop), class: "btn btn-info" %>
+							<%= link_to 'Edit Shop', edit_user_shop_path(@user, shop), class: "btn btn-info" %>
+							<%= link_to 'Delete Shop', user_shop_path(@user, shop), class: "btn btn-danger", method: :delete, data: {confirm: "Are You Confirm?"} %>
 						</div>
-						<% end %>
-
-					</ul>
+						<hr />
+					<% end %>
+					</div>
 				</div>
 			</div>
 		</div>
