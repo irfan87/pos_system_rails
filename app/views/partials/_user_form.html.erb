@@ -1,0 +1,66 @@
+<%= form_for @user, role: "form" do |f| %>
+	<% if @user.errors.any? %>
+		<div class="error_message">
+			<h2>Ops!</h2>
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div class="form-group">
+		<%= f.label :fullname %>
+		<%= f.text_field :fullname, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :username %>
+		<%= f.text_field :username, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :email_address, 'Email Address' %>
+		<%= f.email_field :email_address, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :password %>
+		<%= f.password_field :password, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :password_confirmation, 'Confirmation Password' %>
+		<%= f.password_field :password_confirmation, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :ic_number, 'IC Number' %>
+		<%= f.text_field :ic_number, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :gender %>
+		<%= f.text_field :gender, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :registration_number, 'Company Registration Number' %>
+		<%= f.text_field :registration_number, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :main_shop_name, 'Main Company Name' %>
+		<%= f.text_field :main_shop_name, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :main_shop_address, 'Main Company Address' %>
+		<%= f.text_area :main_shop_address, class: "form-control", cols: 4, rows: 5  %>
+	</div>
+	<div class="form-group">
+		<%= f.label :main_shop_phone_1, 'Main Company Phone (Primary)' %>
+		<%= f.phone_field :main_shop_phone_1, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :main_shop_phone_2, 'Main Company Phone (Secondary)' %>
+		<%= f.phone_field :main_shop_phone_2, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.submit class: "btn btn-primary" %>
+	</div>
+	<div class="form-group">
+		Or <%= link_to "log in", signin_path %> if you are already a member
+	</div>
+<% end %>

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'signin', to: 'sessions#new', as: 'signin'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'contact_us', to: 'welcome_pages#contact_us', as: 'contact_us'
+ 	get 'settings', to: 'settings#index', as: 'settings'
 
   root 'welcome_pages#index'
 end

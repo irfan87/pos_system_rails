@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209075748) do
+ActiveRecord::Schema.define(version: 20170214080851) do
 
   create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "shop_name"
-    t.string   "registration_number"
     t.string   "shop_phone_number_1"
     t.string   "shop_phone_number_2"
     t.text     "shop_address",        limit: 65535
@@ -27,9 +26,17 @@ ActiveRecord::Schema.define(version: 20170209075748) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "username"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "email_address"
+    t.string   "ic_number"
+    t.string   "gender"
+    t.string   "registration_number"
+    t.string   "main_shop_name"
+    t.text     "main_shop_address",   limit: 65535
+    t.string   "main_shop_phone_1"
+    t.string   "main_shop_phone_2"
+    t.string   "fullname"
   end
 
   add_foreign_key "shops", "users"
