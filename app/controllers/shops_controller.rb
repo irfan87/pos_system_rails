@@ -16,6 +16,9 @@ class ShopsController < ApplicationController
 		if @shop.save
 			flash.now[:success] = "Done Add The New Shop"
   		redirect_to user_shops_path(session[:user_id])
+  	elsif @shop.nil?
+  		flash.now[:danger] = "Error"
+  		render :new
 		else
 			render :new
 		end
