@@ -15,7 +15,7 @@ class ShopsController < ApplicationController
 
 		if @shop.save
 			flash.now[:success] = "Done Add The New Shop"
-  		redirect_to user_path(session[:user_id])
+  		redirect_to user_shops_path(session[:user_id])
 		else
 			render :new
 		end
@@ -32,7 +32,7 @@ class ShopsController < ApplicationController
 
 		if @shop.update(shop_params)
 			flash.now[:success] = "Done Update The New Shop"
-			redirect_to user_path(session[:user_id])
+			redirect_to user_shops_path(session[:user_id])
 		else
 			render :edit
 		end
@@ -44,7 +44,7 @@ class ShopsController < ApplicationController
 
 		@shop.destroy
 
-		redirect_to user_path(session[:user_id])
+		redirect_to user_shops_path(session[:user_id])
 	end
 
 	private
