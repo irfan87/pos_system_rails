@@ -8,46 +8,32 @@
 						<h3>General Information</h3>
 					</div>
 					<p>
+						<strong>Fullname: </strong> <%= @user.fullname %>
+					</p>
+					<p>
 						<strong>Username: </strong> <%= @user.username %>
 					</p>
 					<p>
 						<strong>Email (current): </strong> <%= @user.email_address %>
 					</p>
-					<div>
-						<%= link_to 'Edit Profile', edit_user_path(@user), class: "btn btn-info" %>
-					</div>
 					<div class="page-header">
-						<h3>Detail Information (<%= @user.shops.count%> Shops)</h3>
+						<h3>Details</h3>
 					</div>
-					<div class="panel-body">
-					<% @user.shops.all.each do |shop| %>
-						<p>
-							<strong>Shop Name</strong>:
-							<%= shop.shop_name %>
-						</p>
-						<p>
-							<strong>Registration Number: </strong>
-							<%= shop.registration_number %>
-						</p>
-						<p>
-							<strong>Shop Phone Number(Primary):</strong>
-							<%= shop.shop_phone_number_1 %>
-						</p>
-						<p>
-							<strong>Shop Phone Number(Secondary):</strong>
-							<%= shop.shop_phone_number_2 %>
-						</p>
-						<p>
-							<strong>Shop Address:</strong>
-							<%= shop.shop_address %>
-						</p>
-						<div>
-							<%= link_to 'Edit Shop', edit_user_shop_path(@user, shop), class: "btn btn-info" %>
-							<%= link_to 'Delete Shop', user_shop_path(@user, shop), class: "btn btn-danger", method: :delete, data: {confirm: "Are You Confirm?"} %>
-						</div>
-						<hr />
-					<% end %>
-					</div>
+					<p>
+						<strong>Company Name: </strong> <%= @user.main_shop_name %>
+					</p>
+					<p>
+						<strong>Company Registration Number: </strong> <%= @user.registration_number %>
+					</p>
+					<p>
+						<strong>Company Address: </strong> <%= @user.main_shop_address %>
+					</p>
+					<p>
+						<strong>Phone (Primary): </strong> <%= @user.main_shop_phone_1 %>
+					</p>
+					<p>
+						<strong>Phone (Secondary): </strong> <%= @user.main_shop_phone_2 %>
+					</p>
 				</div>
 			</div>
 		</div>

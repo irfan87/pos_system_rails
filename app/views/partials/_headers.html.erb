@@ -1,47 +1,58 @@
 <div class="navbar navbar-static-top navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<%= link_to "Docket System", root_path, class: "navbar-brand" %>
-			</div>
-			<div class="navbar-collapse collapse navbar-responsive-collapse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<%= link_to "Docket System", root_path, class: "navbar-brand" %>
+		</div>
+		<div class="navbar-collapse collapse navbar-responsive-collapse">
+			<% if current_user.present? %>
+			<ul class="nav navbar-nav navbar navbar-right">
 				<ul class="nav navbar-nav">
-					<li>
-						<%= link_to 'Contact Us', contact_us_path %>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<% if current_user.present? %>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<span class="glyphicon glyphicon-user"></span>
-							<%= current_user.username.upcase %>
-							<span class="caret"></span>
+							SETTINGS
+							<strong class="caret"></strong>
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<%= link_to '<span class="glyphicon glyphicon-shopping-cart"></span> Add Shop'.html_safe, new_user_shop_path(current_user) %>
-							</li>
-							<li>
-								<%= link_to '<span class="glyphicon glyphicon-list-alt"></span> Profile'.html_safe, user_path(current_user) %>
-							</li>
-							<li>
-								<%= link_to '<span class="glyphicon glyphicon-envelope"></span> Message'.html_safe, "#" %>
+								<%= link_to 'Edit Profile', edit_user_path(@user) %>
 							</li>
 							<li class="divider"></li>
 							<li>
-								<%= link_to '<span class="glyphicon glyphicon-log-out"></span> Log Out'.html_safe, logout_path%>
+								<%= link_to 'Edit Shop Profile', '#' %>
 							</li>
 						</ul>
 					</li>
-					<% else %>
-					<li>
-						<%= link_to '<span class="glyphicon glyphicon-plus"></span> Sign Up'.html_safe, signup_path %>
-					</li>
-					<li>
-						<%= link_to '<span class="glyphicon glyphicon-log-in"></span> Sign In'.html_safe, signin_path %>
-					</li>
-					<% end %>
 				</ul>
-			</div>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-user"></span>
+						<%= current_user.username.upcase %>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<%= link_to '<span class="glyphicon glyphicon-list-alt"></span> Profile'.html_safe, user_path(current_user) %>
+						</li>
+						<li class="disabled">
+							<%= link_to '<span class="glyphicon glyphicon-envelope"></span> Message'.html_safe, "#" %>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<%= link_to '<span class="glyphicon glyphicon-log-out"></span> Log Out'.html_safe, logout_path%>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<% else %>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<%= link_to '<span class="glyphicon glyphicon-plus"></span> Sign Up'.html_safe, signup_path %>
+				</li>
+				<li>
+					<%= link_to '<span class="glyphicon glyphicon-log-in"></span> Sign In'.html_safe, signin_path %>
+				</li>
+			</ul>
+			<% end %>
 		</div>
+	</div>
 </div>
